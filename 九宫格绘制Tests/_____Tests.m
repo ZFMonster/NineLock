@@ -21,6 +21,10 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    NSLog(@"自定义测试testExample");
+    int  a= 3;
+    XCTAssertTrue(a == 0,"a 不能等于 0");
 }
 
 - (void)testPerformanceExample {

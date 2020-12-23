@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQ6-1s-dBN" customClass="GestureDeblocking">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" red="0.18137434124946594" green="0.1800520122051239" blue="0.21853119134902954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="SAd-sB-ew4"/>
+                                    <constraint firstAttribute="width" constant="375" id="ZiG-7f-tRG"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vtD-ln-8x9">
+                                <rect key="frame" x="102" y="110" width="170" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="5qb-Nf-X0l"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5XQ-Xm-wKU"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdJ-vc-2ot">
+                                <rect key="frame" x="0.0" y="529" width="375" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ud0-s9-4oK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wdJ-vc-2ot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5pi-Ic-4Bj"/>
+                            <constraint firstItem="wdJ-vc-2ot" firstAttribute="top" secondItem="UQ6-1s-dBN" secondAttribute="bottom" constant="8" id="FLV-ed-ZKo"/>
+                            <constraint firstItem="vtD-ln-8x9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNj-zc-8Mj"/>
+                            <constraint firstItem="wdJ-vc-2ot" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TnS-Q2-O1N"/>
+                            <constraint firstItem="UQ6-1s-dBN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eOh-bj-od9"/>
+                            <constraint firstItem="UQ6-1s-dBN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qV3-kN-ABQ"/>
+                            <constraint firstItem="UQ6-1s-dBN" firstAttribute="top" secondItem="vtD-ln-8x9" secondAttribute="bottom" constant="8" id="vRO-LB-lv1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="countSegment" destination="vtD-ln-8x9" id="o89-0a-YiW"/>
+                        <outlet property="gestView" destination="UQ6-1s-dBN" id="Eie-Qk-rhQ"/>
+                        <outlet property="showLabel" destination="wdJ-vc-2ot" id="ptb-eO-Ene"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

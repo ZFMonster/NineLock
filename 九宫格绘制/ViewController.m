@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "GestureDeblocking.h"
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet GestureDeblocking *gestView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *countSegment;
+@property (weak, nonatomic) IBOutlet UILabel *showLabel;
 
 @end
 
@@ -16,14 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    __weak typeof(self) this = self;
+    self.gestView.result = ^(NSArray *indexArray) {
+        
+        NSString *text = [indexArray componentsJoinedByString:@","];
+        this.showLabel.text = text;
+    };
+    
+    [self segmentChanged:self.countSegment];
+}
+- (IBAction)segmentChanged:(UISegmentedControl *)sender {
+    self.gestView.number = sender.selectedSegmentIndex+2;
+    self.gestView.padding = 60-10*self.gestView.number;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

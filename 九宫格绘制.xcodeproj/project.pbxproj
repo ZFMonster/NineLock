@@ -15,6 +15,7 @@
 		DD9C1EC22048F9F30023095D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9C1EC12048F9F30023095D /* main.m */; };
 		DD9C1ECC2048F9F40023095D /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9C1ECB2048F9F40023095D /* _____Tests.m */; };
 		DD9C1ED72048F9F40023095D /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9C1ED62048F9F40023095D /* _____UITests.m */; };
+		DD9C1EE62048FA9F0023095D /* GestureDeblocking.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9C1EE52048FA9F0023095D /* GestureDeblocking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		DD9C1ED22048F9F40023095D /* 九宫格绘制UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "九宫格绘制UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9C1ED62048F9F40023095D /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		DD9C1ED82048F9F40023095D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9C1EE42048FA9F0023095D /* GestureDeblocking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureDeblocking.h; sourceTree = "<group>"; };
+		DD9C1EE52048FA9F0023095D /* GestureDeblocking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureDeblocking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				DD9C1EB32048F9F30023095D /* AppDelegate.m */,
 				DD9C1EB52048F9F30023095D /* ViewController.h */,
 				DD9C1EB62048F9F30023095D /* ViewController.m */,
+				DD9C1EE42048FA9F0023095D /* GestureDeblocking.h */,
+				DD9C1EE52048FA9F0023095D /* GestureDeblocking.m */,
 				DD9C1EB82048F9F30023095D /* Main.storyboard */,
 				DD9C1EBB2048F9F30023095D /* Assets.xcassets */,
 				DD9C1EBD2048F9F30023095D /* LaunchScreen.storyboard */,
@@ -268,6 +273,7 @@
 				DD9C1EB72048F9F30023095D /* ViewController.m in Sources */,
 				DD9C1EC22048F9F30023095D /* main.m in Sources */,
 				DD9C1EB42048F9F30023095D /* AppDelegate.m in Sources */,
+				DD9C1EE62048FA9F0023095D /* GestureDeblocking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +440,7 @@
 				DEVELOPMENT_TEAM = 3JTZHDNVLR;
 				INFOPLIST_FILE = "九宫格绘制/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tgj168.www.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tgj168.www.NinePointLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,7 +454,7 @@
 				DEVELOPMENT_TEAM = 3JTZHDNVLR;
 				INFOPLIST_FILE = "九宫格绘制/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tgj168.www.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tgj168.www.NinePointLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
