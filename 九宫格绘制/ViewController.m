@@ -25,13 +25,12 @@
     [super viewDidLoad];
     __weak typeof(self) this = self;
     self.gestView.result = ^(NSArray *indexArray) {
-        
         NSString *text = [indexArray componentsJoinedByString:@","];
         this.showLabel.text = text;
     };
-    
     [self segmentChanged:self.countSegment];
 }
+
 - (IBAction)segmentChanged:(UISegmentedControl *)sender {
     self.gestView.number = sender.selectedSegmentIndex+2;
     self.gestView.padding = 60-10*self.gestView.number;
